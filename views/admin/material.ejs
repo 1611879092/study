@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <% include header.ejs %>
+    <link rel="stylesheet" href="stylesheets/weui.min.css">
+    <link rel="stylesheet" href="stylesheets/jquery-weui.min.css">
+</head>
+<body>
+<header class="aui-bar aui-bar-nav aui-bar-light">
+    <a class="aui-pull-left aui-btn ">
+        <span class="iconfont icon-jiantou-copy"></span>
+    </a>
+    <div class="aui-title">SC-PREP<small>(554题)</small></div>
+    <a class="aui-pull-right aui-btn">
+        <span class="iconfont icon-shoucang"></span>
+    </a>
+    <a class="aui-pull-right aui-btn">
+        <span class="iconfont icon-005shoucang"></span>
+    </a>
+</header>
+<div class="aui-content">
+    <section class="aui-grid">
+        <div class="aui-row aui-padded-t-10 aui-padded-b-10 aui-border-b">
+            <div class="aui-col-xs-4 aui-padded-t-0 aui-padded-b-0">
+                <div class="aui-grid-label">已练习</div>
+                <h2>2
+                    <small>题</small>
+                </h2>
+            </div>
+            <div class="aui-col-xs-4 aui-border-l aui-padded-t-0 aui-padded-b-0">
+                <div class="aui-grid-label">完成度</div>
+                <h2>0
+                    <small>%</small>
+                </h2>
+            </div>
+            <div class="aui-col-xs-4 aui-border-l aui-padded-t-0 aui-padded-b-0">
+                <div class="aui-grid-label">学习时间</div>
+                <h2>1
+                    <small>min</small>
+                </h2>
+            </div>
+        </div>
+    </section>
+    <ul class="aui-list aui-media-list aui-margin-t-10">
+        <div class="aui-info aui-margin-t-10 aui-padded-l-10 aui-padded-r-10">
+            <div class="aui-info-item">
+                <span class="aui-margin-l-5">PREP 07-12全部题目</span>
+            </div>
+            <div class="aui-info-item iconfont icon-qiehuanzuzhi"></div>
+        </div>
+        <a href="/materialmain" class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">SC-PREP：第1-20题</div>
+                    </div>
+                    <div class="aui-list-item-text">
+                        上次做到：1/20
+                    </div>
+                    <div class="ma_progress"><i class="iconfont icon-zanting"></i><br>0/20</div>
+                </div>
+            </div>
+        </a>
+        <li class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">SC-PREP：第1-20题</div>
+                    </div>
+                    <div class="aui-list-item-text">
+                        预计用时：26min，平均结果：13/20
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">SC-PREP：第1-20题</div>
+                    </div>
+                    <div class="aui-list-item-text">
+                        预计用时：26min，平均结果：13/20
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<% include footer.ejs %>
+<script src="javascripts/jquery-weui.min.js"></script>
+</body>
+<script>
+    $(".icon-qiehuanzuzhi").picker("setValue", ["iPhone 4"],{
+        title: "请选择您的手机",
+        cols: [
+            {
+                textAlign: 'center',
+                values: ['iPhone 4', 'iPhone 4S', 'iPhone 5', 'iPhone 5S', 'iPhone 6', 'iPhone 6 Plus', 'iPad 2', 'iPad Retina', 'iPad Air', 'iPad mini', 'iPad mini 2', 'iPad mini 3']
+            }
+        ],
+        onChange: function(p, v, dv) {
+
+        },
+        onClose: function(p, v, d) {
+            console.log(p.displayValue[0]);
+        }
+    });
+</script>
+<script>
+    $(function () {
+
+    })
+</script>
+</html>

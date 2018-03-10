@@ -1,0 +1,110 @@
+.grade li {
+    display: inline-block;
+    background: #f9f9f9;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    border-radius: 2rem;
+    width: 3rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.grade li:before {
+    position: absolute;
+    left: 0;
+    top: -0.15rem;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    width: 1.3rem;
+    background: #edf6f2;
+    border-radius: 50%;
+    font-family: "iconfont";
+}
+
+.grade li:first-child:before {
+    content: '\e661';
+    color: #ffa726;
+}
+
+.grade li:last-child:before {
+    content: '\e600';
+    color: #76bf9e;
+}
+
+.punch {
+    background: #4281ef;
+    text-align: center;
+    color: #fff !important;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    border-radius: 1rem;
+    width: 55%;
+    display: inline-block;
+    font-size: 0.7rem;
+}
+
+#active {
+    display: none
+}
+
+#nav .bar {
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+}
+
+#nav .bar .color {
+    width: 36px;
+    margin: 0 auto;
+    height: 3px;
+    background: #4281EF;
+}
+
+.infos {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 10000;
+    border-bottom: 1px solid #ddd;
+}
+
+.infos + .aui-content {
+    margin-top: 2.5rem;
+}
+
+#page .aui-list-item {
+    box-shadow: 0 0 0.3rem #bbb;
+    width: 94%;
+    margin: 0.5rem auto 0;
+    border-radius: 0.3rem
+}
+
+.nylx .aui-col-xs-4 {
+    box-shadow: 0 0 0.3rem #dddddd;
+    border-radius: 0.3rem;
+    margin: 2%;
+    width: 29%
+}
+
+.bkzn .aui-list-item {
+    box-shadow: 0 0 0.3rem #dddddd;
+    width: 95%;
+    margin: 0.5rem auto 0;
+    border-radius: 0.3rem;
+}
+.ma_progress{
+    height: 2.2rem;
+    position: absolute;
+    top:0;
+    right: 0.8rem;
+    text-align: center;
+    padding-top: 0.5rem;font-size: 0.7rem;
+}
+.ma_progress .iconfont{
+    color: #4281EF;
+}
+.materialmain .aui-list-item input{position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 7;opacity: 0}

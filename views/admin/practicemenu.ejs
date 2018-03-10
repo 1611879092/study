@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <% include header.ejs %>
+</head>
+<body>
+<form id="app">
+    <div class="form-group">
+        <label>分类名称</label>
+        <input type="text" v-model="name" class="form-control" placeholder="分类名称">
+    </div>
+    <div class="form-group">
+        <label>所属上级分类</label>
+        <select class="form-control" v-model="bigid">
+            <option value="1">SC</option>
+            <option value="2">CR</option>
+            <option value="3">RC</option>
+            <option value="4">PS</option>
+            <option value="5">DS</option>
+        </select>
+    </div>
+    <button type="button" @click="add()" class="btn btn-default">新增</button>
+</form>
+<% include footer.ejs %>
+</body>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            name:'',
+            bigid:'1'
+        },
+        created:function () {
+            $.ajax({
+                url: "/admin/practicemenu",
+                type: 'POST',
+                dataType: 'json',
+                data: {'bigid':1},
+                success: function (data) {
+                    console.log(data)
+                },
+                error: function (e) {
+                    console.log(e)
+                }
+            });
+        },
+        methods:{
+            add:function () {
+                if(this.name=='' || this.bigid==''){
+                    return false;
+                }
+                $.ajax({
+                    url: "practicemenu/add",
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {'name': this.name,'bigid':this.bigid},
+                    success: function (data) {
+                        console.log(data)
+                    },
+                    error: function (e) {
+                        console.log(e)
+                    }
+                });
+            }
+        }
+    })
+    $(function () {
+
+    })
+</script>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <% include header.ejs %>
+    <link rel="stylesheet" href="stylesheets/swiper.min.css">
+</head>
+<body>
+<div id="app">
+    <header class="aui-bar aui-bar-nav aui-bar-light infos">
+        <a class="aui-pull-left aui-btn">
+            <span class="iconfont icon-jiantou-copy"></span>1/20 00:20
+        </a>
+        <div class="aui-pull-right aui-btn" @click="showPopup()">
+            <span class="iconfont icon-shoucang"></span>
+        </div>
+        <div class="aui-pull-right aui-btn collection">
+            <span class="iconfont icon-shoucang1"></span>
+        </div>
+    </header>
+    <div class="aui-content materialmain" style="margin-bottom: 2.7rem">
+        <ul class="aui-list aui-media-list">
+            <p class="aui-padded-10 aui-text-default aui-font-size-16">
+                China vows increased efforts in poverty alleviation
+                China will allocate 106.1 billion yuan ($16.8 billion) in funding for poverty alleviation work in 2018, some 20 billion yuan more than last year.
+            </p>
+            <li class="aui-list-item">
+                <input type="radio" value="0" v-model="materialmain">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            Beijing starts polluter census Beijing Wednesday launched a survey of polluters, to serve the environmental protection drive, implementing a national plan to carry out the second census of pollution sources.
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <input type="radio" value="1" v-model="materialmain">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            ing Wednesday launched a survey of polluters, to serve the environmental protection drive, implementing a national plan to carry out the second census of pollution sources.
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <input type="radio" value="2" v-model="materialmain">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            rive, implementing a national plan to carry out the second census of pollution sources.
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <input type="radio" value="3" v-model="materialmain">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            onmental protection drive, implementing a national plan to carry out the second census of pollution sources.
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <input type="radio" value="4" v-model="materialmain">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            rs, to serve the environmental protection drive, implementing a national plan to carry out the second census of pollution sources.
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <input type="radio" value="5" v-model="materialmain">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            rs, to serve the environmental protection drive, implementing a national plan to carry out the second census of pollution sources.
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <input type="radio" value="6" v-model="materialmain">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            rs, to serve the environmental protection drive, implementing a national plan to carry out the second census of pollution sources.
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <input type="radio" value="7" v-model="materialmain">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            rs, to serve the environmental protection drive, implementing a national plan to carry out the second census of pollution sources.
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <footer class="aui-bar aui-bar-tab aui-border-t aui-font-size-16" id="footer" @click="submit()">
+        <div class="aui-bar-tab-item aui-btn-primary">
+            提交
+        </div>
+    </footer>
+    <!--<footer class="aui-bar aui-bar-tab aui-border-t aui-font-size-16" id="footer">
+        <div class="aui-bar-tab-item">
+            解析<i class="iconfont icon-jiantou-copy1"></i>
+        </div>
+        <div class="aui-bar-tab-item aui-border-l">
+            下一题
+        </div>
+    </footer>-->
+</div>
+<div class="aui-popup aui-popup-top-right" id="top-right">
+    <div class="aui-popup-arrow"></div>
+    <div class="aui-popup-content">
+        <ul class="aui-list aui-list-noborder">
+            <li class="aui-list-item">
+                <a href="###" class="aui-list-item-inner">
+                    题目纠错
+                </a>
+            </li>
+            <li class="aui-list-item">
+                <a href="###" class="aui-list-item-inner">
+                    做题设置
+                </a>
+            </li>
+            <li class="aui-list-item">
+                <a href="###" class="aui-list-item-inner">
+                    题目信息
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<% include footer.ejs %>
+<script src="javascripts/swiper.min.js"></script>
+<script src="javascripts/aui-popup.js"></script>
+</body>
+<script>
+    var popup = new auiPopup();
+    var app = new Vue({
+        el: '#app',
+        data: {
+            materialmain:''
+        },
+        created:function () {
+
+        },
+        methods:{
+            submit:function () {
+                if(this.materialmain == ""){
+                    return false;
+                }
+                console.log(this.materialmain);
+            },
+            showPopup:function () {
+                popup.show(document.getElementById("top-right"))
+            }
+        }
+    })
+    $(function () {
+        $(".materialmain .aui-list-item").click(function () {
+            $(this).addClass('aui-bg-indigo').siblings().removeClass('aui-bg-indigo')
+        })
+        $(".collection").click(function () {
+            $('span',this).toggleClass('icon-collection-b')
+        })
+    })
+</script>
+</html>
